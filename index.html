@@ -292,87 +292,172 @@
             </div>
         </div>
     </section>
-    
+
     <div>
-    <h2 style="text-align:center; color:#ffbb00;""> PROXIMO EVENTO 25 JULIO 2026 GIMNASIO RABBIT PUNCH</h2>
+        <h2 style="text-align:center; color:#ffbb00;""> PROXIMO EVENTO 25 JULIO 2026 GIMNASIO RABBIT PUNCH</h2>
     </div>
 
-    <section class="cta">
-        <a class="btn" href="#registro">QUIERO REGISTRARME</a>
-    </section>
+    <section class=" cta">
+            <a class="btn" href="#registro">QUIERO REGISTRARME</a>
+            </section>
 
-    <section id="registro">
-        <div class="container">
-            <h2>Registro de Atletas</h2>
-            <form>
-                <!-- =========================
-     INFORMACIÓN PERSONAL
-========================= -->
+            <section id="registro">
+                <div class="container">
+                    <h2>Registro de Atletas</h2>
+                    <form id="registroForm">
 
-                <input placeholder="Nombre completo">
-                <input placeholder="Edad">
-                <input placeholder="CURP">
-                <input placeholder="Sexo">
-                <input placeholder="Teléfono">
-                <input placeholder="Correo electrónico">
+                        <!-- =========================
+                             INFORMACIÓN PERSONAL
+                            ========================= -->
 
-                <!-- =========================
-     INFORMACIÓN DEPORTIVA
-========================= -->
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
 
-                <input placeholder="Academia">
-                <input placeholder="Ciudad">
-                <input placeholder="Estado">
-                <input placeholder="Disciplina base">
-                <input placeholder="Tiempo entrenando">
-                <input placeholder="Peso (kg)">
-                <input placeholder="Estatura (cm)">
-                <input placeholder="Récord Amateur (Opcional)">
-                <input placeholder="Récord Profesional (Opcional)">
+                        <input type="number" id="edad" name="edad" placeholder="Edad" required>
 
-                <!-- =========================
-     SALUD
-========================= -->
+                        <input type="text" id="curp" name="curp" placeholder="CURP" required>
 
-                <textarea placeholder="Consideraciones médicas"></textarea>
+                        <input type="text" id="sexo" name="sexo" placeholder="Sexo" required>
 
-                <!-- =========================
-     REDES SOCIALES
-========================= -->
+                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
 
-                <input placeholder="Instagram">
-                <input placeholder="Facebook">
-                <button class="btn" type="button">Enviar Registro</button>
-            </form>
-        </div>
-    </section>
+                        <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
 
-    <section>
-        <div class="container">
-            <h2>Galería</h2>
-            <div class="gallery">
-                <img src="gallery/1.png">
-                <img src="gallery/2.png">
-                <img src="gallery/3.png">
-                <img src="gallery/4.png">
-            </div>
-        </div>
-    </section>
+                        <!-- =========================
+                            INFORMACIÓN DEPORTIVA
+                        ========================= -->
 
-    <section>
-        <div class="container">
-            <h2>Patrocinadores</h2>
-            <div class="sponsors">
-                <img src="sponsors/1.png">
-                <img src="sponsors/2.png">
-                <img src="sponsors/3.png">
-            </div>
-        </div>
-    </section>
+                        <input type="text" id="academia" name="academia" placeholder="Academia" required>
 
-    <footer>
-        © 2026 Sparrings de Compas
-    </footer>
+                        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+
+                        <input type="text" id="estado" name="estado" placeholder="Estado" required>
+
+                        <input type="text" id="disciplina" name="disciplina" placeholder="Disciplina base" required>
+
+                        <input type="text" id="tiempo" name="tiempo" placeholder="Tiempo entrenando" required>
+
+                        <input type="number" id="peso" name="peso" placeholder="Peso (kg)" required>
+
+                        <input type="number" id="estatura" name="estatura" placeholder="Estatura (cm)" required>
+
+                        <input type="text" id="recordAmateur" name="recordAmateur"
+                            placeholder="Récord Amateur (Opcional)">
+
+                        <input type="text" id="recordProfesional" name="recordProfesional"
+                            placeholder="Récord Profesional (Opcional)">
+
+                        <!-- =========================
+                            SALUD
+                        ========================= -->
+
+                        <textarea id="consideraciones" name="consideraciones"
+                            placeholder="Consideraciones médicas"></textarea>
+
+                        <!-- =========================
+                            REDES SOCIALES
+                        ========================= -->
+
+                        <input type="text" id="instagram" name="instagram" placeholder="Instagram">
+
+                        <input type="text" id="facebook" name="facebook" placeholder="Facebook">
+
+                        <button class="btn" type="submit">
+                            Enviar Registro
+                        </button>
+
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <h2>Galería</h2>
+                    <div class="gallery">
+                        <img src="gallery/1.png">
+                        <img src="gallery/2.png">
+                        <img src="gallery/3.png">
+                        <img src="gallery/4.png">
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <h2>Patrocinadores</h2>
+                    <div class="sponsors">
+                        <img src="sponsors/1.png">
+                        <img src="sponsors/2.png">
+                        <img src="sponsors/3.png">
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                © 2026 Sparrings de Compas
+            </footer>
+            <script>
+
+                const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbwm4-gsqmO85UhWgoGqP18Dtn5SL2NWKBV3WlZaRXDtDVy9IKP1KNclb0PA1q2Y5kyOKg/exec";
+
+                document.getElementById("registroForm").addEventListener("submit", async function (e) {
+
+                    e.preventDefault();
+
+                    const datos = {
+                        nombre: document.getElementById("nombre").value,
+                        edad: document.getElementById("edad").value,
+                        curp: document.getElementById("curp").value,
+                        sexo: document.getElementById("sexo").value,
+                        telefono: document.getElementById("telefono").value,
+                        correo: document.getElementById("correo").value,
+
+                        academia: document.getElementById("academia").value,
+                        ciudad: document.getElementById("ciudad").value,
+                        estado: document.getElementById("estado").value,
+                        disciplina: document.getElementById("disciplina").value,
+                        tiempo: document.getElementById("tiempo").value,
+                        peso: document.getElementById("peso").value,
+                        estatura: document.getElementById("estatura").value,
+                        recordAmateur: document.getElementById("recordAmateur").value,
+                        recordProfesional: document.getElementById("recordProfesional").value,
+
+                        consideraciones: document.getElementById("consideraciones").value,
+
+                        instagram: document.getElementById("instagram").value,
+                        facebook: document.getElementById("facebook").value
+                    };
+
+                    try {
+
+                        const formData = new FormData();
+
+                        Object.keys(datos).forEach(clave => {
+                            formData.append(clave, datos[clave]);
+                        });
+
+                        await fetch(URL_APPS_SCRIPT, {
+                            method: "POST",
+                            mode: "no-cors",
+                            body: formData
+                        });
+
+                        // Con "no-cors" el navegador no permite leer la respuesta,
+                        // así que no podemos verificar el texto "OK" que regresa el script.
+                        // Asumimos éxito si el fetch no lanzó un error de red.
+                        alert("Registro enviado correctamente.");
+                        document.getElementById("registroForm").reset();
+
+                    }
+                    catch (error) {
+
+                        alert("Ocurrió un error al enviar el registro.");
+                        console.error(error);
+
+                    }
+
+                });
+
+            </script>
 
 </body>
 

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Sparrings de Compas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #1B1B1B;
+            --card: #2A3439;
+            --accent: #ff6b00;
+            --text: #fff;
+            --muted: #cfcfcf;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: Poppins, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7
+        }
+
+        section {
+            padding: 80px 8%
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 45px
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 34px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: .3s
+        }
+
+        .btn:hover {
+            transform: translateY(-3px)
+        }
+
+        #hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #171717;
+        }
+
+        .hero-banner {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px
+        }
+
+        #hero p {
+            max-width: 700px;
+            margin: auto auto 35px;
+            color: #ddd
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            align-items: center
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 18px
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px
+        }
+
+        .card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 14px;
+            text-align: center
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px
+        }
+
+        .step {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 14px;
+            text-align: center
+        }
+
+        .step span {
+            display: inline-flex;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--accent);
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 15px
+        }
+
+        .cta {
+            text-align: center
+        }
+
+        form {
+            max-width: 900px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 18px
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #222;
+            color: #fff
+        }
+
+        textarea {
+            grid-column: 1/-1;
+            min-height: 120px
+        }
+
+        button {
+            grid-column: 1/-1
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px
+        }
+
+        .gallery img,
+        .sponsors img {
+            width: 100%;
+            border-radius: 12px
+        }
+
+        .sponsors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            align-items: center
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            border-top: 1px solid #222
+        }
+
+        @media(max-width:768px) {
+            #hero h1 {
+                font-size: 2.2rem
+            }
+
+            .about,
+            .steps {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="hero">
+
+        <div class="container">
+
+            <img src="assets/logo.png" alt="Sparrings de Compas" class="hero-banner">
+
+            <h3>BY: TEAM HERNANDEZ | PROYECTHAI PODCAST</h3>
+
+            <h1>¿Quieres participar en nuestros próximos Sparrings?</h1>
+
+            <p>
+                Regístrate y forma parte de la base oficial de atletas de Sparrings de Compas.
+            </p>
+
+            <a href="#registro" class="btn">
+                REGISTRARME
+            </a>
+
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container about">
+            <div>
+                <h2 style="text-align:left">¿Qué son los Sparrings de Compas?</h2>
+                <p>Los Sparrings de Compas son encuentros deportivos donde atletas de diferentes academias pueden
+                    adquirir experiencia, poner a prueba sus habilidades y seguir creciendo dentro de un ambiente de
+                    respeto, aprendizaje y compañerismo.</p>
+                <br>
+                <p>Nuestro objetivo es brindar un espacio seguro para que cada participante sume experiencia competitiva
+                    y continúe desarrollándose en los deportes de contacto.</p>
+                <br>
+                <p>Además del aspecto deportivo, buscamos crear un ambiente familiar donde atletas, entrenadores y
+                    espectadores disfruten de una jornada de convivencia, disciplina y respeto.</p>
+            </div>
+            <div>
+                <img src="assets/quienes-somos.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>¿Por qué registrarte?</h2>
+            <div class="cards">
+                <div class="card">🥊<h3>Participa</h3>
+                    <p>En futuros eventos.</p>
+                </div>
+                <div class="card">🏫<h3>Academia</h3>
+                    <p>Da a conocer tu academia.</p>
+                </div>
+                <div class="card">🏆<h3>Carteleras</h3>
+                    <p>Podrás ser considerado.</p>
+                </div>
+                <div class="card">🤝<h3>Comunidad</h3>
+                    <p>Forma parte del proyecto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>¿Cómo participar?</h2>
+            <div class="steps">
+                <div class="step"><span>1</span>
+                    <h3>Regístrate</h3>
+                </div>
+                <div class="step"><span>2</span>
+                    <h3>Guardaremos tu información</h3>
+                </div>
+                <div class="step"><span>3</span>
+                    <h3>Te contactaremos para futuros eventos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div>
+    <h2 style="text-align:center; color:#ffbb00;""> PROXIMO EVENTO 25 JULIO 2026 GIMNASIO RABBIT PUNCH</h2>
+    </div>
+
+    <section class="cta">
+        <a class="btn" href="#registro">QUIERO REGISTRARME</a>
+    </section>
+
+    <section id="registro">
+        <div class="container">
+            <h2>Registro de Atletas</h2>
+            <form>
+                <!-- =========================
+     INFORMACIÓN PERSONAL
+========================= -->
+
+                <input placeholder="Nombre completo">
+                <input placeholder="Edad">
+                <input placeholder="CURP">
+                <input placeholder="Sexo">
+                <input placeholder="Teléfono">
+                <input placeholder="Correo electrónico">
+
+                <!-- =========================
+     INFORMACIÓN DEPORTIVA
+========================= -->
+
+                <input placeholder="Academia">
+                <input placeholder="Ciudad">
+                <input placeholder="Estado">
+                <input placeholder="Disciplina base">
+                <input placeholder="Tiempo entrenando">
+                <input placeholder="Peso (kg)">
+                <input placeholder="Estatura (cm)">
+                <input placeholder="Récord Amateur (Opcional)">
+                <input placeholder="Récord Profesional (Opcional)">
+
+                <!-- =========================
+     SALUD
+========================= -->
+
+                <textarea placeholder="Consideraciones médicas"></textarea>
+
+                <!-- =========================
+     REDES SOCIALES
+========================= -->
+
+                <input placeholder="Instagram">
+                <input placeholder="Facebook">
+                <button class="btn" type="button">Enviar Registro</button>
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="gallery">
+                <img src="gallery/1.png">
+                <img src="gallery/2.png">
+                <img src="gallery/3.png">
+                <img src="gallery/4.png">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Patrocinadores</h2>
+            <div class="sponsors">
+                <img src="sponsors/1.png">
+                <img src="sponsors/2.png">
+                <img src="sponsors/3.png">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Sparrings de Compas
+    </footer>
+
+</body>
+
+</html>

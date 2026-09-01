@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -199,6 +200,40 @@
             border-top: 1px solid #222
         }
 
+        /* =========================
+           MAPA DE UBICACIÓN
+           ========================= */
+
+        .mapa {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 30px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .mapa iframe {
+            display: block;
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+
+        .ubicacion-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .ubicacion-info p {
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .ubicacion-boton {
+            text-align: center;
+        }
+
         @media(max-width:768px) {
             #hero h1 {
                 font-size: 2.2rem
@@ -207,6 +242,11 @@
             .about,
             .steps {
                 grid-template-columns: 1fr
+            }
+
+            /* Mapa en celulares */
+            .mapa iframe {
+                height: 350px;
             }
         }
     </style>
@@ -231,7 +271,7 @@
             <a href="#registro" class="btn">
                 REGISTRARME
             </a>
-        
+
             <h2 style="text-align:center; color:#ffbb00;""> </h2>
             <h2 style="text-align:center; color:#ffbb00;""> PROXIMO EVENTO 26 DE SEPTIEMBRE 2026</h2>
             <h2 style="text-align:center; color:#ffbb00;""> 9:00A.M. PESAJE | 10:00A.M. COMBATES</h2>
@@ -298,168 +338,212 @@
         </div>
     </section>
 
-    <section class=" cta">
-            <a class="btn" href="#registro">QUIERO REGISTRARME</a>
-            </section>
+    <section class="cta">
+        <a class="btn" href="#registro">QUIERO REGISTRARME</a>
+    </section>
 
-            <section id="registro">
-                <div class="container">
-                    <h2>Registro de Atletas</h2>
-                    <form id="registroForm">
+    <!-- =========================
+         UBICACIÓN
+         ========================= -->
 
-                        <!-- =========================
-                             INFORMACIÓN PERSONAL
-                            ========================= -->
+    <section id="ubicacion">
+        <div class="container">
 
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            <h2>📍 Ubicación</h2>
 
-                        <input type="number" id="edad" name="edad" placeholder="Edad" required>
+            <div class="ubicacion-info">
+                <p>
+                    <strong>Gimnasio Rabbit Punch</strong>
+                </p>
+                <p>
+                    Aquí se llevará a cabo el próximo Sparring de Compas.
+                </p>
+            </div>
 
-                        <input type="text" id="curp" name="curp" placeholder="CURP" required>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.1049220202017!2d-100.29907992403724!3d25.63464301384266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866297c4fdf9cb61%3A0x963728ec0c123791!2sFundaci%C3%B3n%20Rabbit%20Punch!5e0!3m2!1ses!2smx!4v1788237115176!5m2!1ses!2smx"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
 
-                        <input type="text" id="sexo" name="sexo" placeholder="Sexo" required>
+            <div class="ubicacion-boton">
+                <a
+                    class="btn"
+                    href="https://www.google.com/maps/search/?api=1&query=Fundaci%C3%B3n+Rabbit+Punch"
+                    target="_blank">
+                    ABRIR EN GOOGLE MAPS
+                </a>
+            </div>
 
-                        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+        </div>
+    </section>
 
-                        <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+    <section id="registro">
+        <div class="container">
+            <h2>Registro de Atletas</h2>
+            <form id="registroForm">
 
-                        <!-- =========================
-                            INFORMACIÓN DEPORTIVA
-                        ========================= -->
+                <!-- =========================
+                     INFORMACIÓN PERSONAL
+                    ========================= -->
 
-                        <input type="text" id="academia" name="academia" placeholder="Academia" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
 
-                        <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
+                <input type="number" id="edad" name="edad" placeholder="Edad" required>
 
-                        <input type="text" id="estado" name="estado" placeholder="Estado" required>
+                <input type="text" id="curp" name="curp" placeholder="CURP" required>
 
-                        <input type="text" id="disciplina" name="disciplina" placeholder="Disciplina base" required>
+                <input type="text" id="sexo" name="sexo" placeholder="Sexo" required>
 
-                        <input type="text" id="tiempo" name="tiempo" placeholder="Tiempo entrenando" required>
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
 
-                        <input type="number" id="peso" name="peso" placeholder="Peso (kg)" required>
+                <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
 
-                        <input type="number" id="estatura" name="estatura" placeholder="Estatura (cm)" required>
+                <!-- =========================
+                    INFORMACIÓN DEPORTIVA
+                ========================= -->
 
-                        <input type="text" id="recordAmateur" name="recordAmateur"
-                            placeholder="Récord Amateur (Opcional)">
+                <input type="text" id="academia" name="academia" placeholder="Academia" required>
 
-                        <input type="text" id="recordProfesional" name="recordProfesional"
-                            placeholder="Récord Profesional (Opcional)">
+                <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" required>
 
-                        <!-- =========================
-                            SALUD
-                        ========================= -->
+                <input type="text" id="estado" name="estado" placeholder="Estado" required>
 
-                        <textarea id="consideraciones" name="consideraciones"
-                            placeholder="Consideraciones médicas"></textarea>
+                <input type="text" id="disciplina" name="disciplina" placeholder="Disciplina base" required>
 
-                        <!-- =========================
-                            REDES SOCIALES
-                        ========================= -->
+                <input type="text" id="tiempo" name="tiempo" placeholder="Tiempo entrenando" required>
 
-                        <input type="text" id="instagram" name="instagram" placeholder="Instagram">
+                <input type="number" id="peso" name="peso" placeholder="Peso (kg)" required>
 
-                        <input type="text" id="facebook" name="facebook" placeholder="Facebook">
+                <input type="number" id="estatura" name="estatura" placeholder="Estatura (cm)" required>
 
-                        <button class="btn" type="submit">
-                            Enviar Registro
-                        </button>
+                <input type="text" id="recordAmateur" name="recordAmateur"
+                    placeholder="Récord Amateur (Opcional)">
 
-                    </form>
-                </div>
-            </section>
+                <input type="text" id="recordProfesional" name="recordProfesional"
+                    placeholder="Récord Profesional (Opcional)">
 
-            <section>
-                <div class="container">
-                    <h2>Galería</h2>
-                    <div class="gallery">
-                        <img src="gallery/1.png">
-                        <img src="gallery/2.png">
-                        <img src="gallery/3.png">
-                        <img src="gallery/4.png">
-                    </div>
-                </div>
-            </section>
+                <!-- =========================
+                    SALUD
+                ========================= -->
 
-            <section>
-                <div class="container">
-                    <h2>Patrocinadores</h2>
-                    <div class="sponsors">
-                        <img src="sponsors/1.png">
-                        <img src="sponsors/2.png">
-                        <img src="sponsors/3.png">
-                    </div>
-                </div>
-            </section>
+                <textarea id="consideraciones" name="consideraciones"
+                    placeholder="Consideraciones médicas"></textarea>
 
-            <footer>
-                © 2026 Sparrings de Compas
-            </footer>
-            <script>
+                <!-- =========================
+                    REDES SOCIALES
+                ========================= -->
 
-                const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbwm4-gsqmO85UhWgoGqP18Dtn5SL2NWKBV3WlZaRXDtDVy9IKP1KNclb0PA1q2Y5kyOKg/exec";
+                <input type="text" id="instagram" name="instagram" placeholder="Instagram">
 
-                document.getElementById("registroForm").addEventListener("submit", async function (e) {
+                <input type="text" id="facebook" name="facebook" placeholder="Facebook">
 
-                    e.preventDefault();
+                <button class="btn" type="submit">
+                    Enviar Registro
+                </button>
 
-                    const datos = {
-                        nombre: document.getElementById("nombre").value,
-                        edad: document.getElementById("edad").value,
-                        curp: document.getElementById("curp").value,
-                        sexo: document.getElementById("sexo").value,
-                        telefono: document.getElementById("telefono").value,
-                        correo: document.getElementById("correo").value,
+            </form>
+        </div>
+    </section>
 
-                        academia: document.getElementById("academia").value,
-                        ciudad: document.getElementById("ciudad").value,
-                        estado: document.getElementById("estado").value,
-                        disciplina: document.getElementById("disciplina").value,
-                        tiempo: document.getElementById("tiempo").value,
-                        peso: document.getElementById("peso").value,
-                        estatura: document.getElementById("estatura").value,
-                        recordAmateur: document.getElementById("recordAmateur").value,
-                        recordProfesional: document.getElementById("recordProfesional").value,
+    <section>
+        <div class="container">
+            <h2>Galería</h2>
+            <div class="gallery">
+                <img src="gallery/1.png">
+                <img src="gallery/2.png">
+                <img src="gallery/3.png">
+                <img src="gallery/4.png">
+            </div>
+        </div>
+    </section>
 
-                        consideraciones: document.getElementById("consideraciones").value,
+    <section>
+        <div class="container">
+            <h2>Patrocinadores</h2>
+            <div class="sponsors">
+                <img src="sponsors/1.png">
+                <img src="sponsors/2.png">
+                <img src="sponsors/3.png">
+            </div>
+        </div>
+    </section>
 
-                        instagram: document.getElementById("instagram").value,
-                        facebook: document.getElementById("facebook").value
-                    };
+    <footer>
+        © 2026 Sparrings de Compas
+    </footer>
 
-                    try {
+    <script>
 
-                        const formData = new FormData();
+        const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbwm4-gsqmO85UhWgoGqP18Dtn5SL2NWKBV3WlZaRXDtDVy9IKP1KNclb0PA1q2Y5kyOKg/exec";
 
-                        Object.keys(datos).forEach(clave => {
-                            formData.append(clave, datos[clave]);
-                        });
+        document.getElementById("registroForm").addEventListener("submit", async function (e) {
 
-                        await fetch(URL_APPS_SCRIPT, {
-                            method: "POST",
-                            mode: "no-cors",
-                            body: formData
-                        });
+            e.preventDefault();
 
-                        // Con "no-cors" el navegador no permite leer la respuesta,
-                        // así que no podemos verificar el texto "OK" que regresa el script.
-                        // Asumimos éxito si el fetch no lanzó un error de red.
-                        alert("Registro enviado correctamente.");
-                        document.getElementById("registroForm").reset();
+            const datos = {
+                nombre: document.getElementById("nombre").value,
+                edad: document.getElementById("edad").value,
+                curp: document.getElementById("curp").value,
+                sexo: document.getElementById("sexo").value,
+                telefono: document.getElementById("telefono").value,
+                correo: document.getElementById("correo").value,
 
-                    }
-                    catch (error) {
+                academia: document.getElementById("academia").value,
+                ciudad: document.getElementById("ciudad").value,
+                estado: document.getElementById("estado").value,
+                disciplina: document.getElementById("disciplina").value,
+                tiempo: document.getElementById("tiempo").value,
+                peso: document.getElementById("peso").value,
+                estatura: document.getElementById("estatura").value,
+                recordAmateur: document.getElementById("recordAmateur").value,
+                recordProfesional: document.getElementById("recordProfesional").value,
 
-                        alert("Ocurrió un error al enviar el registro.");
-                        console.error(error);
+                consideraciones: document.getElementById("consideraciones").value,
 
-                    }
+                instagram: document.getElementById("instagram").value,
+                facebook: document.getElementById("facebook").value
+            };
 
+            try {
+
+                const formData = new FormData();
+
+                Object.keys(datos).forEach(clave => {
+                    formData.append(clave, datos[clave]);
                 });
 
-            </script>
+                await fetch(URL_APPS_SCRIPT, {
+                    method: "POST",
+                    mode: "no-cors",
+                    body: formData
+                });
+
+                // Con "no-cors" el navegador no permite leer la respuesta,
+                // así que no podemos verificar el texto "OK" que regresa el script.
+                // Asumimos éxito si el fetch no lanzó un error de red.
+                alert("Registro enviado correctamente.");
+                document.getElementById("registroForm").reset();
+
+            }
+            catch (error) {
+
+                alert("Ocurrió un error al enviar el registro.");
+                console.error(error);
+
+            }
+
+        });
+
+    </script>
 
 </body>
 
 </html>
+```
